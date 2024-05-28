@@ -18,10 +18,34 @@ body {
   position:absolute;
   width:300px;
   height:300px;
-  z-index: -1;
+  z-index: -2;
   top:61px;
   left:203px;
   transform: rotate(3.5deg);
+}
+
+
+#white-out-1 {
+  position:absolute;
+  width:100px;
+  height:100px;
+  background-color:white;
+  opacity:100%;
+  z-index: -1;
+  top:80px;
+  left:190px;
+  transform: rotate(-15deg);
+}
+
+#white-out-2 {
+  position:absolute;
+  width:100px;
+  height:100px;
+  background-color:white;
+  z-index: -1;
+  top:100px;
+  left:430px;
+  transform: rotate(-5deg);
 }
 
 
@@ -37,6 +61,10 @@ body {
 </head>
 <body>
     <div id="lottie-container"></div>
+
+    <div id="white-out-1"></div>
+    <div id="white-out-2"></div>
+
 
     <div id="mountains"></div>
 
