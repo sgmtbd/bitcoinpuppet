@@ -16,9 +16,8 @@ body {
 
 #lottie-container {
   position:absolute;
-  width:200;
+  width:200px;
   height:200px;
-  z-index: 0;
   top:97px;
   left:827px;
 }
@@ -27,22 +26,24 @@ body {
 
 
 #mountains {
-  background:url(https://bitcoin.org/img/hero/overview-bg.svg);
-  width:100%;
+  background-image: url(https://bitcoin.org/img/hero/overview-bg.svg);
   height:600px;
 }
+
+
 
     </style>
 
 
 </head>
 <body>
+    <div id="mountains"></div>
     <div id="lottie-container"></div>
 
 
 
 
-    <div id="mountains"></div>
+    
 
     <script>
         // Define your Lottie JSON data
@@ -53,20 +54,27 @@ body {
         // Load the animation
         var animation = lottie.loadAnimation({
             container: document.getElementById('lottie-container'), // the dom element that will contain the animation
+            preserveAspectRatio: 'xMidYMid meet',
             renderer: 'svg',
-            loop: true,
+            loop: false,
             autoplay: false,
-            animationData: lottieJSON // the JSON data
+            animationData: lottieJSON, // the JSON data
+            rendererSettings: {
+              
+            }
         });
 
         lottie.setSpeed(3);
 
 
-        // Add click event listener to the container to play the animation
-        document.getElementById('lottie-container').addEventListener('click', function() {
+       document.getElementById('lottie-container').addEventListener('click', function() {
             animation.stop();
             animation.play(); // play from the beginning
         });
+
+
+
+
 
     </script>
 </body>
